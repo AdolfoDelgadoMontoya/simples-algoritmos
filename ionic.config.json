@@ -1,0 +1,7 @@
+{
+  "name": "algoritmos-simples",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
