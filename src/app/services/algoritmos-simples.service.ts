@@ -21,6 +21,7 @@ export class AlgoritmosSimplesService {
   constructor() { }
 
   ngOnInit(){
+    this.poblar();
   }
 
   poblar(){
@@ -36,11 +37,12 @@ export class AlgoritmosSimplesService {
 
   poblarY(num:number){
     for(let i=0;i<num;i++){
-      this.grafica.data[0].x[i]=i;
+      this.grafica.data[0].x[i]=
+      Math.floor(Math.random()*num)+1;
     }
   }
 
-  esPrimo(n:number):boolean{
+  esprimo(n:number):boolean{
     if(n<=1){
       return false;
     }
