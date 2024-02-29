@@ -23,6 +23,11 @@ export class AlgoritmosSimplesService {
   ngOnInit(){
     this.poblar();
   }
+  /*
+  si ngOnInit aparece en amarillo, debemos de agregarle:void
+  si no se tiene la funcion  se agrega:
+  
+  */
 
   poblar(){
     this.poblarX(100);
