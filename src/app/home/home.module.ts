@@ -4,11 +4,14 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
+import { PlotlyModule } from 'angular-plotly.js';
+
 import { HomePageRoutingModule } from './home-routing.module';
 
 
 @NgModule({
   imports: [
+    PlotlyModule,
     CommonModule,
     FormsModule,
     IonicModule,

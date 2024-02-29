@@ -10,7 +10,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  public grafica = {data:[{x:[1,2,3],y:[5,6,7],type:'bar'}]};
+  public grafica = {data:[{x:[1,2,3],y:[5,6,7],type:'bar'}],layout:{title:'',width:500,height:500}};
   constructor() {}
   
   ngOnInit(){
@@ -34,7 +34,7 @@ export class HomePage {
 
   poblarY(num:number){
     for(let i=0;i<num;i++){
-      this.grafica.data[0].x[i]=
+      this.grafica.data[0].y[i]=
       Math.floor(Math.random()*num)+1;
     }
   }
