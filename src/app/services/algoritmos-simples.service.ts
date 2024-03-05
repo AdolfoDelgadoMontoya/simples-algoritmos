@@ -14,16 +14,16 @@ export class AlgoritmosSimplesService {
 
   constructor() { }
 
-  esprimo(n:number):boolean{
+  esprimo(n:number):number{
     if(n<=1){
-      return false;
+      return 0;
     }
     for (let i = 2; i<n/2;i++){
       if(n%i==0){
-        return false;
+        return 0;
       }
     }
-    return true;
+    return 1;
   }
 
   fibonachi(n:number):number[]{

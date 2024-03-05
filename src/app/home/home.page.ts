@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, numberAttribute } from '@angular/core';
 
 import * as PlotlyJS from 'plotly.js-dist-min';
 import { PlotlyModule } from 'angular-plotly.js';
@@ -13,12 +13,12 @@ import { AlgoritmosSimplesService } from '../services/algoritmos-simples.service
 })
 export class HomePage {
   public grafica = {data:[{x:[1,2,3],y:[5,6,7],type:'bar'}],layout:{title:'',width:500,height:500}};
-  constructor(private miObjeto:AlgoritmosSimplesService) {}
+  constructor(private miObj:AlgoritmosSimplesService) {}
   
   ngOnInit(){
     this.poblar();
     this.bubbleSort();
-    this.generar();
+    this.generar(1000);
   }
   
   poblar(){
@@ -28,7 +28,6 @@ export class HomePage {
 
   poblarX(num:number){
     for(let i=0;i<num;i++){
-    
       this.grafica.data[0].x[i]=i;
     }
   }
@@ -48,7 +47,16 @@ export class HomePage {
     }while(checar);
   }
 
-  generar(){
+  fibonacci:number[]=[];
+  primos:number[]=[];
+  
+  generar(n:number){
+    this.fibonacci=this.miObj.fibonachi(n);
+    for(let i=0; i<= n;i++){
+      this.primos.push(
+        this.miObj.esprimo(i)
+      );
+    }  
   }
 
   poblarY(num:number){

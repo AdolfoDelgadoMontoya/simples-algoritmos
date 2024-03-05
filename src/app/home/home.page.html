@@ -20,13 +20,13 @@
   <!--Fibonachi-->
   <div id="fibonachi">
     <div id="fila">
-      <div id="celula"></div>
+      <div [id]="'celula0'" *ngFor="let fibo of fibonacci">{{fibo}}</div>
     </div>
   </div>
   <!--Numeros primos-->
   <div id="numprimos">
     <div id="fila">
-      <div></div>
+      <div [id]="'celula' + primo" *ngFor="let primo of primos; let index">{{index}}</div>
     </div>
   </div>
 </ion-content>
